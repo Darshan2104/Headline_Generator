@@ -1,0 +1,57 @@
+{% extends 'base.html'%}
+
+{% block head %}
+<title>prediction</title>
+
+{% endblock %}
+
+{% block body %}
+<div class="container-md">
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-lg-6">
+
+            <h1 style="text-align: center">Actual Text</h1><br>
+            <hr>
+            <div style="overflow: auto;">
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                        <p class="lead">{{ text }}</p>
+                    </div>
+                    <br>
+                    <br>
+                </div>
+            </div>
+
+            <h1 style="text-align: center">Actual Summary </h1><br>
+            <hr>
+            <div style="overflow: auto;">
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                        <p class="lead">{{ summary }}</p>
+                    </div>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <h1 style="text-align: center">Predicted Headlines</h1><br>
+            <hr>
+            <div style="overflow: auto;">
+                {% for name,headline in info %}
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                        <h5 class="display-6">{{name}}</h5>
+                        <p class="lead">{{ headline }}</p>
+                    </div>
+                    <br>
+                    <br>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

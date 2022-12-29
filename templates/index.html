@@ -1,0 +1,37 @@
+{% extends 'base.html'%}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<div class="container-md">
+
+    <br>
+
+    <form action="/predict" method="post">
+        <!-- Input -->
+        <!-- 
+    <input type="textare" name="txt" placeholder="Enter your doc here!!!"><br> -->
+
+        <!-- <input type="submit" value="Summarize">
+     -->
+
+        <!-- Message input -->
+        <div class="form-outline mb-4">
+            <h3><b><label for="Doc">Enter Text : </label></b></h3><br>
+            <textarea class="form-control" name="txt" id="form4Example3" rows="13" placeholder="Here you go...."
+                required></textarea>
+        </div>
+
+        <div class="form-outline mb-4">
+            <h3><b><label for="Doc">Enter Summary : </label></b></h3><br>
+            <textarea class="form-control" name="sum" id="form4Example3" rows="5" placeholder="Here you go...."
+                required></textarea>
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block mb-4 btn-lg">Summarize</button>
+    </form>
+</div>
+{% endblock %}
